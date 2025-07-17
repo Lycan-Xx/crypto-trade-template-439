@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { Command, Menu } from "lucide-react";
 import { Button } from "./ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
-import { Today } from "./Today";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -59,11 +58,6 @@ const Navigation = () => {
           <div className="flex items-center gap-2">
             <Command className="w-5 h-5 text-primary" />
             <span className="font-bold text-base">CryptoTrade</span>
-          </div>
-          
-          {/* Today Card - Middle Left */}
-          <div className="hidden lg:block absolute left-1/4 transform -translate-x-1/2">
-            <Today />
           </div>
 
           {/* Desktop Navigation */}
