@@ -71,11 +71,11 @@ export const Today = () => {
   return (
     <div className="glass p-4 rounded-lg w-96 h-48 border border-white/10">
       <div className="space-y-2">
-        <div className="text-xs font-bold text-primary">Current Time</div>
-        <div className="text-lg font-bold text-white font-mono tracking-wider">
+        <div className="text-xl font-bold text-primary">Current Time</div>
+        <div className="text-2xl font-bold text-white font-mono tracking-wider">
           {formattedTime}
         </div>
-        <div className="text-xs text-gray-400 font-medium">
+        <div className="text-xm text-gray-400 font-medium">
           {dateParts.map((part, index) => (
             <span
               key={index}
@@ -87,7 +87,7 @@ export const Today = () => {
             </span>
           ))}
         </div>
-        <div className="text-xs font-mono text-gray-300 h-8 overflow-hidden">
+        <div className="text-{2rem} font-mono text-gray-300 h-8 overflow-hidden">
           {typedText}
           <span className={`ml-1 inline-block w-1 h-3 bg-cyan-400 ${isTyping ? 'animate-pulse' : 'opacity-0'}`}></span>
         </div>
