@@ -1,4 +1,5 @@
-import { Github, Twitter } from "lucide-react";
+
+import { Github, Twitter, Linkedin, Mail } from "lucide-react";
 import { Button } from "./ui/button";
 
 const Footer = () => {
@@ -8,9 +9,9 @@ const Footer = () => {
         <div className="glass glass-hover rounded-xl p-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="space-y-4">
-              <h3 className="font-medium text-lg">CryptoTrade</h3>
+              <h3 className="font-medium text-lg">Your Name</h3>
               <p className="text-sm text-muted-foreground">
-                Empowering traders with advanced crypto trading solutions.
+                Full-Stack Developer crafting exceptional digital experiences.
               </p>
               <div className="flex space-x-4">
                 <Button variant="ghost" size="icon">
@@ -19,52 +20,68 @@ const Footer = () => {
                 <Button variant="ghost" size="icon">
                   <Github className="w-4 h-4" />
                 </Button>
+                <Button variant="ghost" size="icon">
+                  <Linkedin className="w-4 h-4" />
+                </Button>
+                <Button variant="ghost" size="icon">
+                  <Mail className="w-4 h-4" />
+                </Button>
               </div>
             </div>
 
             <div className="space-y-4">
-              <h4 className="font-medium">Trading</h4>
+              <h4 className="font-medium">Navigation</h4>
               <ul className="space-y-2">
                 <li>
-                  <a href="#features" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    Markets
+                  <a href="#about" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    About
                   </a>
                 </li>
                 <li>
-                  <a href="#pricing" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    Trading Fees
+                  <a href="#skills" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    Skills
+                  </a>
+                </li>
+                <li>
+                  <a href="#projects" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    Projects
                   </a>
                 </li>
               </ul>
             </div>
 
             <div className="space-y-4">
-              <h4 className="font-medium">Resources</h4>
+              <h4 className="font-medium">Services</h4>
               <ul className="space-y-2">
                 <li>
                   <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    Trading Guide
+                    Web Development
                   </a>
                 </li>
                 <li>
                   <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    Market Analysis
+                    UI/UX Design
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    Consulting
                   </a>
                 </li>
               </ul>
             </div>
 
             <div className="space-y-4">
-              <h4 className="font-medium">Legal</h4>
+              <h4 className="font-medium">Contact</h4>
               <ul className="space-y-2">
                 <li>
-                  <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    Privacy Policy
+                  <a href="#contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    Get in Touch
                   </a>
                 </li>
                 <li>
                   <a href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    Terms of Service
+                    Resume
                   </a>
                 </li>
               </ul>
@@ -73,7 +90,7 @@ const Footer = () => {
 
           <div className="mt-8 pt-8 border-t border-white/10">
             <p className="text-sm text-muted-foreground text-center">
-              © {new Date().getFullYear()} Rezaul Arif. All rights reserved.
+              © {new Date().getFullYear()} Your Name. All rights reserved.
             </p>
           </div>
         </div>
