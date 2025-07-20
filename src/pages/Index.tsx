@@ -10,6 +10,7 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import Footer from "@/components/Footer";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import { ContactSection } from "@/components/contact/ContactSection";
+import { Today } from "@/components/Today";
 
 const Index = () => {
   return (
@@ -25,50 +26,62 @@ const Index = () => {
       >
         <div className="absolute inset-0 -z-10 bg-[#0A0A0A]" />
         
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2 }}
-          className="inline-block mb-4 px-4 py-1.5 rounded-full glass"
-        >
-          <span className="text-sm text-primary">Available for work</span>
-        </motion.div>
-        
-        <div className="max-w-4xl relative z-10">
-          <h1 className="text-5xl md:text-7xl font-normal mb-4 tracking-tight text-left">
-            <span className="text-gray-200">
-              <TextGenerateEffect words="Hi, I'm" />
-            </span>
-            <br />
-            <span className="text-white font-medium">
-              <TextGenerateEffect words="Your Name" />
-            </span>
-          </h1>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start relative z-10">
+          <div className="lg:col-span-8 order-2 lg:order-1">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+              className="inline-block mb-4 px-4 py-1.5 rounded-full glass"
+            >
+              <span className="text-sm text-primary">Available for work</span>
+            </motion.div>
+            
+            <h1 className="text-5xl md:text-7xl font-normal mb-4 tracking-tight text-left">
+              <span className="text-gray-200">
+                <TextGenerateEffect words="Hi, I'm" />
+              </span>
+              <br />
+              <span className="text-white font-medium">
+                <TextGenerateEffect words="Your Name" />
+              </span>
+            </h1>
+            
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+              className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl text-left"
+            >
+              Full-Stack Developer & Designer crafting exceptional digital experiences with modern technologies.{" "}
+              <span className="text-white">Let's build something amazing together.</span>
+            </motion.p>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
+              className="flex flex-col sm:flex-row gap-4 items-start"
+            >
+              <Button size="lg" className="button-gradient">
+                View My Work
+                <ArrowRight className="ml-2 w-4 h-4" />
+              </Button>
+              <Button variant="outline" size="lg" className="glass">
+                Download Resume
+              </Button>
+            </motion.div>
+          </div>
           
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl text-left"
-          >
-            Full-Stack Developer & Designer crafting exceptional digital experiences with modern technologies.{" "}
-            <span className="text-white">Let's build something amazing together.</span>
-          </motion.p>
-          
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-            className="flex flex-col sm:flex-row gap-4 items-start"
-          >
-            <Button size="lg" className="button-gradient">
-              View My Work
-              <ArrowRight className="ml-2 w-4 h-4" />
-            </Button>
-            <Button variant="outline" size="lg" className="glass">
-              Download Resume
-            </Button>
-          </motion.div>
+          <div className="lg:col-span-4 flex justify-center lg:justify-end order-1 lg:order-2">
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.6 }}
+            >
+              <Today />
+            </motion.div>
+          </div>
         </div>
 
         <motion.div
